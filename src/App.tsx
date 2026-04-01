@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+
 import {
   ArrowRight,
   Check,
@@ -27,7 +28,9 @@ import Navbar from './Navbar';
 import { Outlet } from 'react-router-dom';
 import CaseStudies from './CaseStudies';
 import ClientFeedback from './ClientFeedback';
+import PrivacyPolicy from './PrivacyPolicy';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // Import images
 import fullServiceImg from './images/Full-Service-Management.png';
@@ -464,7 +467,9 @@ const Contact = () => {
             </div>
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-brand-muted mb-1">© 2026 Mavenziet, Inc.</p>
-              <p className="text-xs font-bold"><a href="#">Privacy Policy</a> · <a href="#"> Terms of Service</a></p>
+              <p className="text-xs font-bold">
+                <Link to="/privacy-policy" className="hover:underline">Privacy Policy and Terms of Services</Link>
+              </p>
             </div>
           </div>
         </div>
@@ -603,6 +608,7 @@ export default function App() {
         <Route path="/full-service-management" element={<FullServiceManagement />} />
         <Route path="/amazon-advertising" element={<AmazonAdvertising />} />
         <Route path="/strategy-consulting" element={<StrategyConsulting />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/faqs" element={<FAQ />} />
       </Routes>
     </Router>
