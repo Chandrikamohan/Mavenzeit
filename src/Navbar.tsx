@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { cn } from './lib/utils';
-import { Menu, X } from 'lucide-react';
+import { ArrowRight, Menu, UserPlus, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import logoImg from './images/logo.svg';
 
@@ -48,7 +48,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          {['Services', 'Work', 'Benefits', 'Pricing', 'FAQs', 'Case Studies', 'Client Feedback'].map(item => (
+          {['Services', 'Work', 'Benefits', 'Case Studies', 'Client Feedback'].map(item => (
             <button
               key={item}
               className="text-sm font-medium hover:text-brand-muted transition-colors"
@@ -60,8 +60,9 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="hidden md:block px-5 py-2.5 bg-black text-white rounded-full text-sm font-medium hover:bg-black/80 transition-all">
-            Get Started
+          <button className="px-8 py-4 bg-white border border-brand-border rounded-full font-bold flex items-center gap-2 hover:bg-black/5 transition-colors">
+            CLient Onboarding
+            <ArrowRight size={18} />
           </button>
           <button
             className="md:hidden p-2 hover:bg-black/5 rounded-full"
@@ -91,7 +92,7 @@ const Navbar = () => {
               </button>
             ))}
             <button className="w-full py-4 bg-black text-white rounded-xl font-medium mt-2">
-              Get Started
+              Client Onboarding
             </button>
           </motion.div>
         )}

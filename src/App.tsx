@@ -39,6 +39,7 @@ import FullServiceManagement from './FullServiceManagement';
 import logoImg from './images/footer_logo.jpg';
 import AmazonAdvertising from './AmazonAdvertising';
 import StrategyConsulting from './StrategyConsulting';
+import FAQ from './FAQ';
 
 
 // import Hero from './Hero';
@@ -167,7 +168,7 @@ const Services = () => {
       title: "1.	Full-Service Management",
       path: "/full-service-management",
       desc: "Growth and scale management, including operations and advertising ",
-      tags: ["1. Ignite Your Business Growth", "2. Tailored Holistic Solutions", "3.	Maximize Your ROI", "4.	Collaborative Account Management", "5.	Transparent and Confident Delegation", "6.	Full Funnel Advertising Strategy"],
+      tags: ["Ignite Your Business Growth", "Tailored Holistic Solutions", "Maximize Your ROI", "Collaborative Account Management", "Transparent and Confident Delegation", "Full Funnel Advertising Strategy"],
       icon: <LayoutDashboard className="text-zinc-400" />,
       img: fullServiceImg
     },
@@ -175,7 +176,7 @@ const Services = () => {
       title: "2.	Amazon Advertising",
       path: "/amazon-advertising",
       desc: "Grow your business with a full-funnel Amazon search advertising strategy ",
-      tags: ["1. Looking for Inspiration", " 2. Product/Brand Awareness ", " 3. Improving Purchase Intent", " 4. Finding Information ", " 5. Driving Purchase "],
+      tags: ["Looking for Inspiration", " Product/Brand Awareness ", " Improving Purchase Intent", " Finding Information ", " Driving Purchase "],
       icon: <TrendingUp className="text-zinc-400" />,
       img: advertisingImg
     },
@@ -183,7 +184,7 @@ const Services = () => {
       title: "3.	Strategy & Consulting",
       path: "/strategy-consulting",
       desc: "Work with experienced strategists to guide your business growth",
-      tags: ["1. Product Launch", " 2. Product Market Fit ", " 3. Profitable Scaling ", " 4. Advertising Structure and Strategy ", " 5. Creative Strategy ", " 6. Global Launch Strategy "],
+      tags: ["Product Launch", " Product Market Fit ", " Profitable Scaling ", " Advertising Structure and Strategy ", " Creative Strategy ", " Global Launch Strategy "],
       icon: <SearchCheck className="text-zinc-400" />,
       img: strategyImg
     }
@@ -219,7 +220,7 @@ const Services = () => {
               <p className="text-brand-muted mb-8 leading-relaxed">{s.desc}</p>
               <div className="flex flex-wrap gap-2 mb-10">
                 {s.tags.map(t => (
-                  <span key={t} className="px-3 py-1 bg-white border border-brand-border rounded-full text-[10px] font-bold uppercase text-brand-muted">
+                  <span key={t} className="px-3 py-1 bg-white border border-brand-border rounded-full text-[10px] font-bold text-brand-muted">
                     {t}
                   </span>
                 ))}
@@ -253,7 +254,7 @@ const Benefits = () => {
             <div className="inline-block px-3 py-1 bg-black text-white rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">
               Benefits
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter">Our Benefits.</h2>
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter">We Offer</h2>
           </div>
           <p className="max-w-sm text-brand-muted text-lg leading-relaxed">
             Get unlimited design work for a simple monthly rate. No hourly billing, no surprises — pause or cancel whenever you need.
@@ -328,7 +329,7 @@ const Work = () => {
   );
 };
 
-const Pricing = () => {
+/* const Pricing = () => {
   const plans = [
     {
       name: "Design Retainer",
@@ -417,60 +418,8 @@ const Pricing = () => {
       </div>
     </section>
   );
-};
+}; */
 
-const FAQ = () => {
-  const faqs = [
-    { q: "How does the subscription model work?", a: "You pay a fixed monthly fee and get access to a dedicated design team. Submit unlimited requests, and we'll work through them one by one. No hourly billing, no contracts — cancel anytime." },
-    { q: "What kind of design tasks can I request?", a: "Everything from brand identity and UI/UX design to social media graphics, pitch decks, and custom illustrations. We cover the full spectrum of digital design." },
-    { q: "How fast will I receive my designs?", a: "Most requests are delivered in 2-3 business days. More complex projects like full website redesigns or mobile apps are broken down into smaller milestones." },
-    { q: "What tools do you use to manage the work?", a: "We primarily use Figma for design and Trello or Notion for project management. Communication happens asynchronously via Slack or our dedicated design portal." },
-  ];
-
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  return (
-    <section id="faqs" className="py-24 px-6 bg-white">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-block px-3 py-1 bg-black text-white rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">
-            FAQs
-          </div>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">Questions.</h2>
-          <p className="text-brand-muted text-lg">Everything you need to know about our design subscription service.</p>
-        </div>
-
-        <div className="space-y-4">
-          {faqs.map((f, i) => (
-            <div key={i} className="border border-brand-border rounded-3xl overflow-hidden">
-              <button
-                className="w-full p-8 flex items-center justify-between text-left hover:bg-brand-bg transition-colors"
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-              >
-                <span className="text-xl font-bold">{f.q}</span>
-                {openIndex === i ? <Minus size={20} /> : <Plus size={20} />}
-              </button>
-              <AnimatePresence>
-                {openIndex === i && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="p-8 pt-0 text-brand-muted leading-relaxed">
-                      {f.a}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 const Contact = () => {
   return (
@@ -566,7 +515,7 @@ const Footer = () => {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-brand-muted mb-6">Navigation</h4>
             <ul className="space-y-4 font-medium">
-              {['Services', 'Benefits', 'Work', 'Pricing', 'Reviews', 'FAQs'].map(item => (
+              {['Services', 'Benefits', 'Work', 'Reviews', 'FAQs'].map(item => (
                 <li key={item}><a href={`#${item.toLowerCase()}`} className="hover:text-brand-muted transition-colors">{item}</a></li>
               ))}
             </ul>
@@ -624,7 +573,7 @@ function HomePage() {
       <Services />
       <Benefits />
       <Work />
-      <Pricing />
+      {/* <Pricing /> */}
       <FAQ />
       <Contact />
     </>
@@ -644,6 +593,7 @@ export default function App() {
         <Route path="/full-service-management" element={<FullServiceManagement />} />
         <Route path="/amazon-advertising" element={<AmazonAdvertising />} />
         <Route path="/strategy-consulting" element={<StrategyConsulting />} />
+        <Route path="/faqs" element={<FAQ />} />
       </Routes>
     </Router>
   );
