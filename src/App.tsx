@@ -29,6 +29,7 @@ import { Outlet } from 'react-router-dom';
 import CaseStudies from './CaseStudies';
 import ClientFeedback from './ClientFeedback';
 import PrivacyPolicy from './PrivacyPolicy';
+import TermsOfService from './TermsOfService';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Link } from "react-router-dom";
 
@@ -43,6 +44,7 @@ import logoImg from './images/footer_logo.jpg';
 import AmazonAdvertising from './AmazonAdvertising';
 import StrategyConsulting from './StrategyConsulting';
 import FAQ from './FAQ';
+import ClientOnboarding from "./ClientOnboarding";
 
 
 // import Hero from './Hero';
@@ -467,8 +469,10 @@ const Contact = () => {
             </div>
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-brand-muted mb-1">© 2026 Mavenziet, Inc.</p>
-              <p className="text-xs font-bold">
-                <Link to="/privacy-policy" className="hover:underline">Privacy Policy and Terms of Services</Link>
+              <p className="text-xs font-bold flex gap-4">
+                <Link to="/privacy-policy" className="hover:underline">Privacy Policy</Link>
+                <span className="text-zinc-300">·</span>
+                <Link to="/terms-of-service" className="hover:underline">Terms of Service</Link>
               </p>
             </div>
           </div>
@@ -609,7 +613,9 @@ export default function App() {
         <Route path="/amazon-advertising" element={<AmazonAdvertising />} />
         <Route path="/strategy-consulting" element={<StrategyConsulting />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/faqs" element={<FAQ />} />
+        <Route path="/client-onboarding" element={<ClientOnboarding />} />
       </Routes>
     </Router>
   );
