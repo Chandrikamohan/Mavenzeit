@@ -61,7 +61,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           <button className="px-8 py-4 bg-white border border-brand-border rounded-full font-bold flex items-center gap-2 hover:bg-black/5 transition-colors">
-            CLient Onboarding
+            Client Onboarding
             <ArrowRight size={18} />
           </button>
           <button
