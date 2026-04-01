@@ -430,7 +430,7 @@ const Contact = () => {
             Contact
           </div>
           <h3 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-none flex items-center gap-6">
-            <img src={logoImg} alt="Vanguard Logo" className="h-[100px] w-auto object-contain rounded-xl shadow-sm" />
+
             Let's Talk.
           </h3>
           <p className="text-xl text-brand-muted mb-12 max-w-sm leading-relaxed">
@@ -455,6 +455,16 @@ const Contact = () => {
                 <p className="text-xs font-bold uppercase tracking-widest text-brand-muted mb-1">Call us</p>
                 <p className="text-xl font-bold">+1 (555) 000-0000</p>
               </div>
+            </div>
+          </div>
+
+          <div className="p-8 flex items-center gap-6 group">
+            <div className="w-30 h-30 bg-brand-bg rounded-2xl flex items-center justify-center group-hover:bg-black group-hover:text-white transition-colors">
+              <img src={logoImg} alt="Vanguard Logo" className=" " />
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-muted mb-1">© 2026 Mavenziet, Inc.</p>
+              <p className="text-xs font-bold"><a href="#">Privacy Policy</a> · <a href="#"> Terms of Service</a></p>
             </div>
           </div>
         </div>
