@@ -24,7 +24,9 @@ const Navbar = () => {
     if (item === 'Case Studies') {
       navigate('/case-studies');
     } else if (item === 'Client Feedback') {
-      navigate('/client-feedback'); // NEW
+      navigate('/client-feedback');
+    } else if (item === 'FAQs') {
+      navigate('/faqs');
     } else {
       if (location.pathname !== '/') {
         navigate('/', { state: { scrollTo: item.toLowerCase().replace(' ', '-') } });
@@ -48,7 +50,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          {['Services', 'Work', 'Benefits', 'Case Studies', 'Client Feedback'].map(item => (
+          {['Services', 'Work', 'Benefits', 'Case Studies', 'Client Feedback', 'FAQs'].map(item => (
             <button
               key={item}
               className="text-sm font-medium hover:text-brand-muted transition-colors"
@@ -62,10 +64,16 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <button
             onClick={() => navigate('/client-onboarding')}
-            className="px-8 py-4 bg-white border border-brand-border rounded-full font-bold flex items-center gap-2 hover:bg-black/5 transition-colors"
+            className="hidden md:flex px-8 py-4 bg-white border border-brand-border rounded-full font-bold items-center gap-2 hover:bg-black/5 transition-colors"
           >
             Client Onboarding
             <ArrowRight size={18} />
+          </button>
+          <button
+            className="md:hidden p-2 hover:bg-black/5 rounded-full mt-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -79,7 +87,7 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-full left-0 right-0 bg-white border-b border-brand-border p-6 md:hidden flex flex-col gap-4 shadow-xl"
           >
-            {['Services', 'Work', 'Benefits', 'Pricing', 'FAQs', 'Case Studies', 'Client Feedback'].map(item => (
+            {['Services', 'Work', 'Benefits', 'Case Studies', 'Client Feedback', 'FAQs'].map(item => (
               <button
                 key={item}
                 className="text-lg font-medium text-left"
@@ -88,7 +96,10 @@ const Navbar = () => {
                 {item}
               </button>
             ))}
-            <button className="w-full py-4 bg-black text-white rounded-xl font-medium mt-2">
+            <button 
+              onClick={() => { setIsMenuOpen(false); navigate('/client-onboarding'); }}
+              className="w-full py-4 bg-black text-white rounded-xl font-medium mt-2"
+            >
               Client Onboarding
             </button>
           </motion.div>

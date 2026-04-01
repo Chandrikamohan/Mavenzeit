@@ -592,8 +592,8 @@ function HomePage() {
       <Services />
       <Benefits />
       <Work />
-      {/* <Pricing /> */}
-      <FAQ />
+      {/* <Pricing /> 
+      <FAQ />*/}
       <Contact />
     </>
   );
