@@ -60,11 +60,11 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-white rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">
+          {/* <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-white rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
             Available for Projects
-          </div>
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] mb-8">
+          </div> */}
+          <h1 className="text-6xl md:text-7xl font-bold tracking-tighter leading-[0.9] mb-8">
             World-Class <br /> Design Partner <br /> For AI Startups
           </h1>
           <p className="text-xl text-brand-muted max-w-md mb-10 leading-relaxed">
@@ -112,7 +112,7 @@ const Hero = () => {
           className="grid grid-cols-2 gap-4 h-[600px]"
         >
           <div className="space-y-4">
-            <div className="h-[60%] bg-zinc-200 rounded-3xl overflow-hidden relative group">
+            <div className="h-[60%] bg-zinc-200 rounded-2xl overflow-hidden relative group">
               <img
                 src="https://picsum.photos/seed/design1/800/1000"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -123,7 +123,7 @@ const Hero = () => {
                 <span className="text-white font-medium text-sm">Mobile App Design</span>
               </div>
             </div>
-            <div className="h-[35%] bg-zinc-800 rounded-3xl overflow-hidden group">
+            <div className="h-[35%] bg-zinc-800 rounded-2xl overflow-hidden group">
               <img
                 src="https://picsum.photos/seed/design2/800/600"
                 className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
@@ -133,7 +133,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="space-y-4 pt-12">
-            <div className="h-[35%] bg-zinc-300 rounded-3xl overflow-hidden group">
+            <div className="h-[35%] bg-zinc-300 rounded-2xl overflow-hidden group">
               <img
                 src="https://picsum.photos/seed/design3/800/600"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -141,7 +141,7 @@ const Hero = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="h-[60%] bg-zinc-100 rounded-3xl overflow-hidden group relative">
+            <div className="h-[60%] bg-zinc-100 rounded-2xl overflow-hidden group relative">
               <img
                 src="https://picsum.photos/seed/design4/800/1000"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
