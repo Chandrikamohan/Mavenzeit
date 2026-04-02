@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
                     </p>
 
                     <section className="space-y-4">
-                        <h2 className="text-xl font-bold text-gray-900 border-b pb-2">1. Interpretation and Definitions</h2>
+                        <h2 className="text-xl font-bold text-gray-900 border-b pb-2"> Interpretation and Definitions</h2>
 
                         <div className="space-y-3">
                             <h3 className="text-lg font-semibold text-gray-800">Interpretation</h3>
@@ -41,7 +41,7 @@ const PrivacyPolicy = () => {
                         </div>
                     </section>
                     <section className="space-y-4">
-                        <h2 className="text-xl font-bold text-gray-900 border-b pb-2">2. Acceptance of Terms</h2>
+                        <h2 className="text-xl font-bold text-gray-900 border-b pb-2">Acceptance of Terms</h2>
 
                         <div className="space-y-3">
                             <h3 className="text-lg font-semibold text-gray-800">Interpretation</h3>
